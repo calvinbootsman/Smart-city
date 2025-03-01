@@ -2,7 +2,7 @@
 \usepackage{graphicx} % Required for inserting images
 
 \title{Smart City Assen}
-\author{Ciaran Maher, Calvin Bootsman}
+\author{Ciaran Maher, Calvin Bootsman, Fotios Koutkos}
 
 \begin{document}
 
@@ -65,14 +65,17 @@ At the core of the system, weather sensors will be deployed throughout the city 
 
 \subsection{Predictive Weather Process for Energy Management}
 
-Weather forecasting plays a pivotal role in determining when to store or distribute energy. The system utilizes machine learning models trained on historical weather patterns combined with real-time sensor data to make accurate predictions. The system operates through a seasonal decision-making process:
+Weather prediction is vital for optimizing energy storage and distribution, particularly in waste-based heating systems. Machine learning models trained on historical weather patterns and real-time sensor data enable accurate forecasts, improving energy management. The climate of Assen exhibits seasonal variations in temperature, precipitation, snowfall, and solar energy, all affecting energy demand and resource availability.
 
-- In summer, when outdoor temperatures are high and heating demand is low, excess industrial waste heat is stored in underground reservoirs. Weather sensors and solar intensity measurements ensure that only surplus heat is collected.
-- During autumn, the system monitors seasonal changes based on weather data, gradually adjusting heat distribution based on early indicators of declining temperatures.
-- In winter, predictive models analyze weather forecasts to determine upcoming heating needs. If severe cold weather is anticipated, the system prioritizes stored energy usage before drawing additional heat from industrial sources.
-- In spring, as heating demand decreases, excess industrial heat is redirected back into storage, preparing the system for the next heating cycle.
+The warm season lasts 3.3 months, from June to September, with daily highs exceeding 19°C. July is the warmest month, averaging highs of 22°C and lows of 12°C. The cold season spans 3.7 months, from November to March, with daily highs below 8°C. January, the coldest month, records an average high of 5°C and a low of 0°C, highlighting winter heating needs. \cite{weatherspark_assen}
 
-This predictive approach minimizes waste, maximizes energy efficiency, and ensures a reliable heat supply all year round.
+Precipitation influences moisture-related energy sources. A wet day, with at least 1 mm of precipitation, occurs more frequently from May to February, with December averaging 10.3 wet days. The drier season, from February to May, reaches a minimum in April at 7.0 wet days. Rainfall, the primary precipitation type, peaks at 34 percent in July, offering water-based energy recovery opportunities. \cite{weatherspark_assen}
+
+Snowfall affects thermal storage and distribution. The snowy period lasts 1.7 months, from December to February, with accumulations exceeding 25 mm in any 31-day period. January sees the most snowfall, averaging 33 mm. The snowless period, spanning 10 months from February to December, limits snow-based thermal storage outside winter. \cite{weatherspark_assen}
+
+Solar energy variations influence heating and renewable integration. The brighter period, from April to August, sees daily shortwave solar energy exceed 5.1 kWh/m², peaking in June at 6.3 kWh/m². The darker period, from October to February, drops below 1.7 kWh/m², reaching a December low of 0.5 kWh/m², emphasizing predictive models in heating management. \cite{weatherspark_assen}
+
+Machine learning-driven weather forecasting improves energy storage and distribution. These climatic factors guide the design of energy-efficient systems that reduce fossil fuel reliance and support smart city modernization through waste-to-heat technology.
 
 \subsection{Communication Technologies for IoT Integration}
 
