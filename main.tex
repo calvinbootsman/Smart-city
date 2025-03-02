@@ -1,14 +1,14 @@
 \documentclass[conference]{IEEEtran}
 \usepackage{graphicx} % Required for inserting images
 
-\title{Smart City Assen}
+\title{IoT-Based Smart District Heating in Assen Using Edge-Fog Computing}
 \author{Ciaran Maher, Calvin Bootsman, Fotios Koutkos}
 
 \begin{document}
 
 \maketitle
 \section{Introduction}
-In ordor to meet its commitments to the Paris Accord, the Netherlands is rapidly transitioning to a renewable energy mix, requiring a fundamental redesign of its electricity, oil, and heating infrastructure\cite{paris_agreement}. This national transition necessitates significant changes at the local level, particularly in urban areas like Assen(population ~69,701 in 2024\cite{allecijfers}), where residential heating plays a crucial role in overall energy consumption. Detailed energy consumption data for Assen underscores the city's significant reliance on natural gas for residential heating, highlighting a crucial opportunity for carbon emission reduction. The detached houses in Assen consume an average of 1,490 m$^3$ of natural gas annually, while the apartments consume 670 m$^3$\cite{assen_woningen}, indicating a substantial variation in heating demands across different housing types. Converting these natural gas consumption figures to energy units reveals that approximately 80\% of the energy consumption is used for heating.
+In order to meet its commitments to the Paris Accord, the Netherlands is rapidly transitioning to a renewable energy mix, requiring a fundamental redesign of its electricity, oil, and heating infrastructure\cite{paris_agreement}. This national transition necessitates significant changes at the local level, particularly in urban areas like Assen(population ~69,701 in 2024\cite{allecijfers}), where residential heating plays a crucial role in overall energy consumption. Detailed energy consumption data for Assen underscores the city's significant reliance on natural gas for residential heating, offering a significant opportunity for carbon emission reduction. The detached houses in Assen consume an average of 1,490 m$^3$ of natural gas annually, while the apartments consume 670 m$^3$\cite{assen_woningen}, indicating a substantial variation in heating demands across different housing types. Converting these natural gas consumption figures to energy units reveals that approximately 80\% of the energy consumption is used for heating.
 
 In urban areas like Assen, district heating presents a significant opportunity to transition towards sustainable energy consumption. Residential heating constitutes a major portion of the city's energy demand, particularly during colder months. By establishing a robust district heating network powered by renewable energy sources, Assen can significantly reduce its carbon footprint and enhance energy efficiency\cite{allecijfers}.
 
@@ -64,10 +64,18 @@ Advanced IoT-based control mechanisms dynamically adjust heat distribution in re
 
 The selection of heat sources plays a fundamental role in the performance of Assen’s district heating network. This proposal integrates solar thermal, biomass, and heat pumps as primary energy sources while utilizing natural gas as a transitional backup to ensure supply stability.
 
-\textbf{Solar thermal systems} capture and convert solar radiation into heat, providing a sustainable energy source, particularly during the brighter months.
-\textbf{Biomass Boilers} utilize organic materials to generate heat, offering a carbon-neutral alternative to fossil fuels and supporting national renewable energy goals.
-\textbf{Heat pumps} extract heat from ambient air, ground, or water sources, delivering an energy-efficient heating solution suited to Assen’s climate.
-\textbf{Natural gas} functions as a backup during peak demand periods, ensuring reliability while renewable capacity is scaled up.
+\begin{itemize}
+    \item \textbf{Solar thermal systems} capture and convert solar radiation into heat, providing a sustainable energy source, particularly during the brighter months.
+\end{itemize}
+\begin{itemize}
+    \item \textbf{Biomass Boilers} utilize organic materials to generate heat, offering a carbon-neutral alternative to fossil fuels and supporting national renewable energy goals.
+\end{itemize}
+\begin{itemize}
+    \item \textbf{Heat pumps} extract heat from ambient air, ground, or water sources, delivering an energy-efficient heating solution suited to Assen’s climate.
+\end{itemize}
+\begin{itemize}
+    \item \textbf{Natural gas} functions as a backup during peak demand periods, ensuring reliability while renewable capacity is scaled up.
+\end{itemize}
 By strategically integrating these sources, the district heating network minimizes carbon emissions while maintaining a stable and adaptable energy supply.
 
 Advanced IoT controls adjust heat distribution based on demand forecasts, optimizing energy use and reducing waste. We propose a localized energy auction market, using IoT data to set hourly heat prices, mirroring the Dutch electricity market. Targeted subsidies will incentivize renewable heat adoption, balancing economic efficiency and sustainability in Assen's transition to carbon neutrality.
@@ -80,9 +88,9 @@ LoRaWAN (Long Range Wide Area Network): Low-power, long-range communication prot
 Wi-Fi: High-bandwidth, short-range protocol implemented in district heating facilities and residential units to facilitate localized energy control.
 A hybrid communication strategy is adopted, utilizing LoRaWAN for large-scale sensor networks and Wi-Fi for real-time adjustments in heating distribution. This ensures efficient data flow across the network, supporting automated decision-making processes.
 
-\subsection{Comparison of IoT Architectures and Communication Methods}
+\subsection{IoT Architecture and Communication Framework}
 
-To evaluate the efficiency of different architectures and communication technologies, the following criteria were analyzed:
+The efficiency of different IoT architectures and communication technologies was assessed based on latency, scalability, power consumption, and data processing capabilities.
 
 \begin{table}[h]
 \centering
@@ -99,7 +107,7 @@ Data Processing & Local & Distributed & Centralized \\
 \end{tabular}
 \end{table}
 
-The Edge-Fog hybrid model is selected as it enables low-latency processing for real-time heat distribution while leveraging fog computing for regional data aggregation and optimization.
+An Edge-Fog hybrid architecture is implemented to balance real-time processing with broader system optimization. Edge computing ensures rapid response times by processing data locally at sensor nodes, which is critical for real-time heat distribution. Fog computing aggregates data at intermediate nodes, facilitating predictive analytics and optimizing energy allocation across the district heating network.
 
 \begin{table}[h]
 \centering
@@ -116,7 +124,7 @@ Urban Suitability & High & Moderate \\
 \end{tabular}
 \end{table}
 
-By integrating both communication protocols, the system maintains high efficiency and adaptability across varying operational scenarios.
+A hybrid communication approach is adopted to ensure robust data exchange. LoRaWAN is used for city-wide sensor deployments, enabling long-range, low-power data transmission from environmental and heat sensors. Wi-Fi supports high-speed, localized communication within district heating facilities and residential units, facilitating energy control and system adjustments. This integration enhances data reliability and operational efficiency in dynamic urban heating environments.
 
 \subsection{Implementation Challenges and System Optimization}
 
