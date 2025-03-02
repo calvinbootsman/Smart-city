@@ -50,33 +50,39 @@ For an IoT-based district heating system, selecting an appropriate computational
 Communication technologies play an equally vital role in ensuring seamless data transmission between sensors, energy storage units, and control systems. In conventional heating networks, wired communication protocols such as Ethernet and Modbus are commonly used in industrial settings for reliable, high-speed data exchange. However, IoT-based smart city applications often require wireless solutions for greater flexibility and scalability. Technologies such as LoRaWAN and Wi-Fi are particularly relevant, each with trade-offs in coverage, power efficiency, and data transfer speed. LoRaWAN (Long Range Wide Area Network) is well-suited for large-scale use of low-power, long-range sensors in urban heating applications. Meanwhile, Wi-Fi is commonly used in smart home applications to control heating systems locally but has limitations in power efficiency and range \cite{comm_tech_review}. 
 
 \section{Design}
-\subsection{Heat sources}
-Selecting the optimal combination of heat sources is critical for the design of Assen's renewable-powered district heating network. This proposal strategically incorporates natural gas, biomass, solar thermal, and heat pumps to ensure a balanced and resilient energy supply.  While the long-term goal is to move away from fossil fuels, natural gas is considered as a transitional energy source, providing a reliable backup to guarantee consistent heat supply during the initial phases and peak demand periods, especially before renewable sources are fully scaled. Biomass boilers are included as a carbon-neutral alternative to natural gas, leveraging sustainable organic materials to generate heat and reduce reliance on fossil fuels, aligning with national renewable energy targets. Solar thermal systems are selected to harness Assen's solar energy potential, particularly during the brighter months, contributing a clean and sustainable heat source that reduces the carbon footprint. Finally, heat pumps are integrated for their energy efficiency, extracting heat from ambient air, ground, or water sources, offering a versatile and renewable heating solution suitable for Assen's climate conditions and contributing to a sustainable and efficient district heating network.
+\subsection{an introduction, not sure if there should be a title here}
 
-\subsection{IoT Architecture for Smart Energy Management}
+The proposed smart heating system for Assen suggests an IoT-based predictive energy management framework to optimize the integration of renewable heat sources into a district heating network. This system continuously monitors environmental conditions, energy availability, and thermal storage levels to determine the most effective energy distribution strategy. A hybrid Edge-Fog architecture is selected to balance real-time decision-making at the local level with long-term forecasting in the cloud.
 
-The proposed smart heating system for Assen utilizes an IoT-based predictive energy management framework to optimize the use of industrial waste heat for residential heating. The system operates by continuously monitoring environmental conditions, industrial heat availability, and thermal storage levels to determine the most efficient energy distribution strategy. A hybrid Edge-Fog architecture is selected to balance real-time decision-making at the local level with long-term energy forecasting in the cloud.
+Real-time monitoring relies on a network of sensors deployed throughout the city. Weather sensors measure atmospheric parameters such as temperature, humidity, wind speed, and solar intensity to predict heating demand fluctuations. Heat source sensors track the availability of renewable energy from solar thermal, biomass, and heat pumps, ensuring efficient allocation of heating resources. Thermal storage sensors monitor temperature and capacity levels in underground reservoirs, enabling strategic retention and release of stored heat. These integrated components provide the data needed for dynamic heat management and efficient system operation.
 
-At the core of the system, weather sensors will be deployed throughout the city to measure key atmospheric parameters, including temperature, humidity, wind speed, and solar intensity. These sensors help anticipate heating demand fluctuations, allowing the system to make supported decisions about whether to store excess heat during the warmer months or distribute it when temperatures drop. In parallel, industrial heat sensors monitor waste heat availability from local factories, ensuring that excess energy is efficiently redirected into the system. Finally, thermal storage sensors track the temperature and capacity levels of underground heat reservoirs, ensuring optimal energy retention and release. These three sensor types collectively provide the necessary data to enable smart, real-time heat management.
+\subsection{IoT Smart Heating and Forecasting}
 
-\subsection{Predictive Weather Process for Energy Management}
+To enhance heating system performance, the IoT framework incorporates machine learning algorithms trained on historical weather patterns and real-time sensor data. These predictive models enable accurate forecasting of heating demands, allowing the system to anticipate periods of surplus and scarcity. By analyzing climate trends, such as seasonal temperature variations and solar radiation intensity, the system can optimize energy storage and release cycles.
 
-Weather prediction is vital for optimizing energy storage and distribution, particularly in waste-based heating systems. Machine learning models trained on historical weather patterns and real-time sensor data enable accurate forecasts, improving energy management.
+Advanced IoT-based control mechanisms dynamically adjust heat distribution in response to demand fluctuations. These automated controls ensure that excess energy is either stored or redirected to areas with higher demand, reducing unnecessary energy waste. By integrating forecasting with automated heat management, the system significantly improves efficiency and reduces reliance on backup fossil fuel sources.
 
-Machine learning-driven weather forecasting improves energy storage and distribution. These climatic factors guide the design of energy-efficient systems that reduce fossil fuel reliance and support smart city modernization through waste-to-heat technology.
+\subsection{Heat Source Selection for District Heating}
 
-\subsection{Communication Technologies for IoT Integration}
+The selection of heat sources plays a fundamental role in the performance of Assen’s district heating network. This proposal integrates solar thermal, biomass, and heat pumps as primary energy sources while utilizing natural gas as a transitional backup to ensure supply stability.
 
-A robust communication infrastructure is necessary to ensure seamless data exchange between sensors, heat storage units, and control systems. The following communication technologies were considered for the system:
-LoRaWAN (Long Range Wide Area Network) is a low-power, long-range protocol ideal for city-wide sensor deployments. It allows weather and industrial heat sensors to transmit data efficiently over large distances while consuming minimal energy.
-Wi-Fi can be utilised also for its high bandwidth and used for local connectivity in homes and district heating facilities, enabling efficient energy control at the consumer level.
+Solar Thermal Systems: Capture and convert solar radiation into heat, providing a sustainable energy source, particularly during the brighter months.
+Biomass Boilers: Utilize organic materials to generate heat, offering a carbon-neutral alternative to fossil fuels and supporting national renewable energy goals.
+Heat Pumps: Extract heat from ambient air, ground, or water sources, delivering an energy-efficient heating solution suited to Assen’s climate.
+Natural Gas (Transitional Source): Functions as a backup during peak demand periods, ensuring reliability while renewable capacity is scaled up.
+By strategically integrating these sources, the district heating network minimizes carbon emissions while maintaining a stable and adaptable energy supply.
 
-Given the need for low-power, long-range communication, a hybrid approach is chosen:
-LoRaWAN is used for weather and industrial heat sensors deployed across Assen. Where Wi-Fi is used for real-time heating control in homes and district heating plants.
+\subsection{System Integration and Communication Infrastructure}
+
+Effective system operation relies on real-time data exchange between sensors, storage units, and control mechanisms. A robust communication infrastructure is required to transmit data efficiently while balancing energy consumption and network coverage.
+
+LoRaWAN (Long Range Wide Area Network): Low-power, long-range communication protocol used for city-wide sensor deployments, enabling real-time environmental and heat source monitoring.
+Wi-Fi: High-bandwidth, short-range protocol implemented in district heating facilities and residential units to facilitate localized energy control.
+A hybrid communication strategy is adopted, utilizing LoRaWAN for large-scale sensor networks and Wi-Fi for real-time adjustments in heating distribution. This ensures efficient data flow across the network, supporting automated decision-making processes.
 
 \subsection{Comparison of IoT Architectures and Communication Methods}
 
-To evaluate the suitability of different architectures and communication technologies, the following comparison criteria were analyzed:
+To evaluate the efficiency of different architectures and communication technologies, the following criteria were analyzed:
 
 \begin{table}[h]
 \centering
@@ -93,7 +99,7 @@ Data Processing & Local & Distributed & Centralized \\
 \end{tabular}
 \end{table}
 
-An Edge-Fog hybrid model is selected because low-latency local processing at the edge is necessary for real-time energy distribution decisions, while fog computing enables data grouping and analysis at the city level.
+The Edge-Fog hybrid model is selected as it enables low-latency processing for real-time heat distribution while leveraging fog computing for regional data aggregation and optimization.
 
 \begin{table}[h]
 \centering
@@ -110,17 +116,22 @@ Urban Suitability & High & Moderate \\
 \end{tabular}
 \end{table}
 
-The selected communication strategy ensures efficient, cost-effective, and scalable data transmission across Assen’s heating network.
+By integrating both communication protocols, the system maintains high efficiency and adaptability across varying operational scenarios.
 
-\subsection{Challenges and Potential Solutions}
+\subsection{Implementation Challenges and System Optimization}
 
-Several technical and practical challenges exist in deploying this system. Sensor accuracy and calibration could pose problems as weather and heat sensors require periodic recalibration to maintain accuracy. Automated self-checking algorithms can help detect faults in this regard. Thermal storage efficiency in underground heat reservoirs experience gradual energy loss over time. So, advanced insulation materials can help improve heat retention. The integration of existing infrastructure could involve some problems, but retrofitting older buildings with IoT-enabled heating controls may require more government incentives.
+Several challenges must be addressed to ensure efficient deployment and long-term performance:
+
+Sensor Calibration: Weather and heat sensors require periodic recalibration to maintain accuracy. Automated self-checking algorithms can detect and correct faults.
+Thermal Storage Losses: Heat reservoirs experience gradual energy loss. Advanced insulation materials can mitigate this issue and improve heat retention.
+Infrastructure Integration: Retrofitting existing buildings with IoT-enabled heating controls may require policy incentives and additional funding.
+Addressing these challenges through system refinements and technological advancements enhances the feasibility and resilience of Assen’s district heating network.
 
 \subsection{Conclusion and Future Work}
 
-This paper presents an IoT-enabled predictive heating system for Assen that integrates weather sensors, industrial heat monitoring, and seasonal thermal storage to optimize energy distribution. The system’s Edge-Fog hybrid architecture ensures real-time decision-making, while LoRaWAN enable city-wide connectivity with minimal power consumption.
+This paper presents an IoT-enabled predictive heating system for Assen, integrating real-time environmental monitoring, advanced forecasting, and adaptive energy distribution. The system’s Edge-Fog hybrid architecture enables efficient decision-making, while a LoRaWAN-Wi-Fi communication framework ensures reliable data exchange.
 
-Future research could focus on developing advanced AI models to improve predictive heat demand forecasting. Additionally, a practical addition could be to incorporate district heating system to bike lanes in the winter months to melt ice/snow utilising the waste energy system for a safer smart city. Finally, further exploration of alternative thermal storage solutions, such as phase-change materials, could enhance the system’s long-term viability.
+Future research could explore enhanced AI models for heat demand forecasting to further optimize energy use. Additionally, an innovative extension could involve utilizing excess heat from the district heating system to warm bike lanes in winter, reducing ice accumulation and improving safety. Further exploration of alternative thermal storage solutions, such as phase-change materials, could also enhance long-term energy efficiency.
 
 \bibliographystyle{ieeetr}
 \bibliography{bibliography}
