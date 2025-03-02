@@ -8,11 +8,9 @@
 
 \maketitle
 \section{Introduction}
-To meet its commitments to the Paris Accord, the Netherlands is rapidly transitioning to a renewable energy mix, requiring a fundamental redesign of its electricity, oil, and heating infrastructure\cite{paris_agreement}. This national transition necessitates significant changes at the local level, particularly in urban areas like Assen(population ~69,701 in 2024\cite{allecijfers}), where residential heating plays a crucial role in overall energy consumption. Detailed energy consumption data for Assen underscores the city's significant reliance on natural gas for residential heating, highlighting a crucial opportunity for carbon emission reduction. The detached houses in Assen consume an average of 1,490 m$^3$ of natural gas annually, while the apartments consume 670 m$^3$\cite{assen_woningen}, indicating a substantial variation in heating demands across different housing types. Converting these natural gas consumption figures to energy units reveals that approximately 80\% of the energy consumption is used for heating.
+In ordor to meet its commitments to the Paris Accord, the Netherlands is rapidly transitioning to a renewable energy mix, requiring a fundamental redesign of its electricity, oil, and heating infrastructure\cite{paris_agreement}. This national transition necessitates significant changes at the local level, particularly in urban areas like Assen(population ~69,701 in 2024\cite{allecijfers}), where residential heating plays a crucial role in overall energy consumption. Detailed energy consumption data for Assen underscores the city's significant reliance on natural gas for residential heating, highlighting a crucial opportunity for carbon emission reduction. The detached houses in Assen consume an average of 1,490 m$^3$ of natural gas annually, while the apartments consume 670 m$^3$\cite{assen_woningen}, indicating a substantial variation in heating demands across different housing types. Converting these natural gas consumption figures to energy units reveals that approximately 80\% of the energy consumption is used for heating.
 
-Given that approximately 80\% of Assen's residential energy consumption is dedicated to heating, the city faces a pressing need to transition away from natural gas. 
-
-In urban areas like Assen (population ~69,701 in 2024\cite{allecijfers}), district heating presents a significant opportunity to transition towards sustainable energy consumption. Residential heating constitutes a major portion of the city's energy demand, particularly during colder months. By establishing a robust district heating network powered by renewable energy sources, Assen can significantly reduce its carbon footprint and enhance energy efficiency\cite{allecijfers}.
+In urban areas like Assen, district heating presents a significant opportunity to transition towards sustainable energy consumption. Residential heating constitutes a major portion of the city's energy demand, particularly during colder months. By establishing a robust district heating network powered by renewable energy sources, Assen can significantly reduce its carbon footprint and enhance energy efficiency\cite{allecijfers}.
 
 This proposal aims to develop a smart energy management system that implements Internet of Things (IoT) technologies to optimize a renewable-powered district heating network in Assen. The core of this system will focus on integrating diverse renewable energy sources, such as solar thermal, biomass, and heat pumps, to supply the district heating network. By integrating predictive weather analytics, the system will forecast heating demands and employ seasonal thermal energy storage to store surplus renewable heat generated during periods of high availability for use during peak demand.
 
@@ -50,7 +48,6 @@ For an IoT-based district heating system, selecting an appropriate computational
 Communication technologies play an equally vital role in ensuring seamless data transmission between sensors, energy storage units, and control systems. In conventional heating networks, wired communication protocols such as Ethernet and Modbus are commonly used in industrial settings for reliable, high-speed data exchange. However, IoT-based smart city applications often require wireless solutions for greater flexibility and scalability. Technologies such as LoRaWAN and Wi-Fi are particularly relevant, each with trade-offs in coverage, power efficiency, and data transfer speed. LoRaWAN (Long Range Wide Area Network) is well-suited for large-scale use of low-power, long-range sensors in urban heating applications. Meanwhile, Wi-Fi is commonly used in smart home applications to control heating systems locally but has limitations in power efficiency and range \cite{comm_tech_review}. 
 
 \section{Design}
-\subsection{an introduction, not sure if there should be a title here}
 
 The proposed smart heating system for Assen suggests an IoT-based predictive energy management framework to optimize the integration of renewable heat sources into a district heating network. This system continuously monitors environmental conditions, energy availability, and thermal storage levels to determine the most effective energy distribution strategy. A hybrid Edge-Fog architecture is selected to balance real-time decision-making at the local level with long-term forecasting in the cloud.
 
@@ -62,15 +59,18 @@ To enhance heating system performance, the IoT framework incorporates machine le
 
 Advanced IoT-based control mechanisms dynamically adjust heat distribution in response to demand fluctuations. These automated controls ensure that excess energy is either stored or redirected to areas with higher demand, reducing unnecessary energy waste. By integrating forecasting with automated heat management, the system significantly improves efficiency and reduces reliance on backup fossil fuel sources.
 
+
 \subsection{Heat Source Selection for District Heating}
 
 The selection of heat sources plays a fundamental role in the performance of Assen’s district heating network. This proposal integrates solar thermal, biomass, and heat pumps as primary energy sources while utilizing natural gas as a transitional backup to ensure supply stability.
 
-Solar Thermal Systems: Capture and convert solar radiation into heat, providing a sustainable energy source, particularly during the brighter months.
-Biomass Boilers: Utilize organic materials to generate heat, offering a carbon-neutral alternative to fossil fuels and supporting national renewable energy goals.
-Heat Pumps: Extract heat from ambient air, ground, or water sources, delivering an energy-efficient heating solution suited to Assen’s climate.
-Natural Gas (Transitional Source): Functions as a backup during peak demand periods, ensuring reliability while renewable capacity is scaled up.
+\textbf{Solar thermal systems} capture and convert solar radiation into heat, providing a sustainable energy source, particularly during the brighter months.
+\textbf{Biomass Boilers} utilize organic materials to generate heat, offering a carbon-neutral alternative to fossil fuels and supporting national renewable energy goals.
+\textbf{Heat pumps} extract heat from ambient air, ground, or water sources, delivering an energy-efficient heating solution suited to Assen’s climate.
+\textbf{Natural gas} functions as a backup during peak demand periods, ensuring reliability while renewable capacity is scaled up.
 By strategically integrating these sources, the district heating network minimizes carbon emissions while maintaining a stable and adaptable energy supply.
+
+Advanced IoT controls adjust heat distribution based on demand forecasts, optimizing energy use and reducing waste. We propose a localized energy auction market, using IoT data to set hourly heat prices, mirroring the Dutch electricity market. Targeted subsidies will incentivize renewable heat adoption, balancing economic efficiency and sustainability in Assen's transition to carbon neutrality.
 
 \subsection{System Integration and Communication Infrastructure}
 
